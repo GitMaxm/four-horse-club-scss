@@ -1,0 +1,31 @@
+.ticker {
+    padding: 18px 0;
+    background-color: #f54932;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+
+    @media (max-width: 500px) {
+        gap: 10px;
+    }
+}
+
+.ticker-text {
+    display: inline-block;
+    font-family: var(--second-family);
+    font-size: clamp(1rem, 0.858rem + 0.61vw, 1.375rem);
+    text-transform: uppercase;
+    color: #fff;
+
+    /* Анимация */
+    animation: ticker 20s linear infinite;
+}
+
+@keyframes ticker {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

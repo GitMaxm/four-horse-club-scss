@@ -1,0 +1,110 @@
+.chessplayers {
+    padding-top: 100px;
+    padding-bottom: 140px;
+}
+
+.chessplayers__column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.chessplayers__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-navigation {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 63px;
+}
+
+.button-prev,
+.button-next {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Добавлено для лучшей визуальной отзывчивости */
+}
+
+.button-prev.disabled,
+.button-next.disabled,
+.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+
+.button-prev circle:hover,
+.button-next circle:hover {
+    transition: fill 0.2s, color 0.2s;
+    fill: #fbce51;
+}
+
+/* Дополнительные стили для пагинации */
+.swiper-pagination {
+    z-index: 1 !important;
+    position: absolute;
+    bottom: 11px !important;
+
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide {
+    width: auto; /* Убираем фиксированную ширину, чтобы слайды могли изменять свою ширину */
+    flex-shrink: 0; /* Предотвращаем сжатие слайдов */
+    /* Добавляем отступы для красоты */
+    box-sizing: border-box;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Стили для заголовков и текста внутри слайдов */
+.swiper-slide__title {
+    margin-top: 28px;
+}
+
+.swiper-slide__text {
+    margin-top: 6px;
+
+    opacity: 0.6;
+    margin-bottom: 12px; /* Отступ между текстом и ссылкой */
+}
+
+.swiper-slide__link {
+    margin-top: 6px;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 62px;
+    border: 1px solid #3057a2;
+    color: #3057a2;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.swiper-slide__link:hover {
+    background-color: #3057a2;
+    color: #fff;
+}

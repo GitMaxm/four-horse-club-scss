@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Merriweather:wght@400;700&display=swap");
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-color);
+	font-family: var(--font-family);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 400;
+}
+
+img {
+	display: block;
+}
+
+.title-1 {
+	font-family: var(--second-family);
+	font-size: clamp(2.25rem, 1.682rem + 2.42vw, 3.75rem);
+	line-height: 1.1;
+	text-transform: uppercase;
+}
+
+.title-2 {
+	font-family: var(--second-family);
+	font-size: 54px;
+	text-transform: uppercase;
+}
+
+.title-3 {
+	font-family: var(--second-family);
+	font-size: clamp(1.75rem, 1.56rem + 0.81vw, 2.25rem); //36 - 28
+	line-height: 1.35;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.title-4 {
+	font-weight: 600;
+	font-size: 24px;
+}

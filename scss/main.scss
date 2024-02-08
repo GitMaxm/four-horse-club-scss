@@ -1,0 +1,15 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+
+/* Blocks */
+@import "./blocks/header";
+@import "./blocks/tournament";
+@import "./blocks/steps";
+@import "./blocks/ticker";
+@import "./blocks/chessplayers";
+@import "./blocks/footer";
