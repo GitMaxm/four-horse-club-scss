@@ -1,21 +1,19 @@
 .header {
     padding-top: 26px;
     padding-bottom: 130px;
-    background: url("./../../img/header/all-1920.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("./../img/header/all-1920.png") no-repeat bottom;
 
     background-color: #e9ded4;
     position: relative;
 
-    @media (max-width: 1400px) {
-        background: url("./../../img/header/all-1366.png") no-repeat bottom;
+    @media (max-width: 1366px) {
+        background: url("./../img/header/all-1366.png") no-repeat bottom;
         background-color: #e9ded4;
     }
 
     @media (max-width: 900px) {
         padding-bottom: 200px;
-        background: url("./../../img/header/notSun.png") no-repeat bottom;
+        background: url("./../img/header/notSun.png") no-repeat bottom;
         background-color: #e9ded4;
     }
 
@@ -25,7 +23,7 @@
 
     @media (max-width: 375px) {
         padding-bottom: 291px;
-        background: url("./../../img/header/all-600.png") no-repeat bottom center;
+        background: url("./../img/header/all-600.png") no-repeat bottom center;
         background-color: #e9ded4;
     }
 }
@@ -37,7 +35,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url("./../../img/header/bg.png");
+    background-image: url("./../img/header/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.1; /* Или любое другое значение для достижения желаемого эффекта */
@@ -115,6 +113,8 @@
 
         .mobile-break {
             display: none;
+
+            padding: 18px 43px;
         }
     }
 }

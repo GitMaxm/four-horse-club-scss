@@ -216,22 +216,20 @@ img {
 .header {
   padding-top: 26px;
   padding-bottom: 130px;
-  background: url("./../../img/header/all-1920.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("./../img/header/all-1920.png") no-repeat bottom;
   background-color: #e9ded4;
   position: relative;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1366px) {
   .header {
-    background: url("./../../img/header/all-1366.png") no-repeat bottom;
+    background: url("./../img/header/all-1366.png") no-repeat bottom;
     background-color: #e9ded4;
   }
 }
 @media (max-width: 900px) {
   .header {
     padding-bottom: 200px;
-    background: url("./../../img/header/notSun.png") no-repeat bottom;
+    background: url("./../img/header/notSun.png") no-repeat bottom;
     background-color: #e9ded4;
   }
 }
@@ -243,7 +241,7 @@ img {
 @media (max-width: 375px) {
   .header {
     padding-bottom: 291px;
-    background: url("./../../img/header/all-600.png") no-repeat bottom center;
+    background: url("./../img/header/all-600.png") no-repeat bottom center;
     background-color: #e9ded4;
   }
 }
@@ -255,7 +253,7 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("./../../img/header/bg.png");
+  background-image: url("./../img/header/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1; /* Или любое другое значение для достижения желаемого эффекта */
@@ -353,6 +351,7 @@ img {
   }
   .header__button .mobile-break {
     display: none;
+    padding: 18px 43px;
   }
 }
 
@@ -470,6 +469,11 @@ img {
   margin-top: 37px;
   margin-bottom: 27px;
 }
+@media (max-width: 768px) {
+  .tournament__event-table {
+    display: none;
+  }
+}
 
 .tournament__event-table td {
   border: 2px solid #d0d0d0;
@@ -478,18 +482,10 @@ img {
 
 .column-left {
   padding: 16px 0;
-  opacity: 0.7;
 }
 
 .column-right {
-  font-weight: 600;
   padding: 16px;
-}
-
-.column-right s {
-  -webkit-text-decoration-color: red;
-          text-decoration-color: red;
-  padding-right: 9px;
 }
 
 .tournament__contact-link {
@@ -499,6 +495,54 @@ img {
   .tournament__contact-link {
     font-size: 18px;
   }
+}
+
+@media (max-width: 768px) {
+  .tournament__event-columns {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 32px;
+    margin-top: 37px;
+    margin-bottom: 27px;
+  }
+  .tournament__event-columns__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12px;
+    position: relative;
+  }
+  .tournament__event-columns__block--line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 2px;
+    height: 1px;
+    color: #3057a2;
+  }
+}
+.tournament__event-table__title {
+  opacity: 0.7;
+}
+
+.tournament__event-table__text {
+  font-weight: 600;
+}
+
+.tournament__event-table__text s {
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+  padding-right: 9px;
 }
 
 .steps {
@@ -610,7 +654,10 @@ img {
 }
 @media (max-width: 500px) {
   .ticker {
-    gap: 10px;
+    padding: 10px 0;
+  }
+  .ticker--media-top {
+    top: -21px;
   }
 }
 
