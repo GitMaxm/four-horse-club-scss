@@ -135,7 +135,7 @@ img {
 
 .title-2 {
   font-family: var(--second-family);
-  font-size: 54px;
+  font-size: clamp(2.25rem, 1.823rem + 1.82vw, 3.375rem);
   text-transform: uppercase;
 }
 
@@ -181,12 +181,14 @@ img {
 }
 @media (max-width: 540px) {
   .container {
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media (max-width: 380px) {
   .container {
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -236,11 +238,12 @@ img {
 @media (max-width: 600px) {
   .header {
     padding-bottom: 250px;
+    padding-top: 18px;
   }
 }
 @media (max-width: 375px) {
   .header {
-    padding-bottom: 291px;
+    padding-bottom: 310px;
     background: url("./../img/header/all-600.png") no-repeat bottom center;
     background-color: #e9ded4;
   }
@@ -256,7 +259,7 @@ img {
   background-image: url("./../img/header/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.1; /* Или любое другое значение для достижения желаемого эффекта */
+  opacity: 0.1;
 }
 
 .header__column {
@@ -278,6 +281,10 @@ img {
   }
 }
 
+.logo {
+  width: 213px;
+}
+
 .header__content {
   max-width: 542px;
   text-align: center;
@@ -293,6 +300,7 @@ img {
 @media (max-width: 500px) {
   .header__content-text {
     margin-bottom: 32px;
+    text-align: left;
   }
 }
 
@@ -322,7 +330,7 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 14px;
+    gap: 9px;
   }
 }
 
@@ -348,6 +356,8 @@ img {
 @media (max-width: 676px) {
   .header__button {
     width: 100%;
+    padding: 24px;
+    height: 20px;
   }
   .header__button .mobile-break {
     display: none;
@@ -393,11 +403,13 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 83px;
   padding-bottom: 33px;
 }
 @media (max-width: 1300px) {
   .tournament__info {
+    padding-top: 28px;
+    padding-bottom: 33px;
     gap: 35px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -409,6 +421,7 @@ img {
 @media (max-width: 500px) {
   .tournament__info {
     gap: 24px;
+    padding-bottom: 53px;
   }
 }
 
@@ -441,7 +454,7 @@ img {
 }
 @media (max-width: 500px) {
   .tournament__event-image {
-    margin-left: 0px;
+    margin: -20px;
   }
 }
 .tournament__event-details {
@@ -449,12 +462,18 @@ img {
 }
 @media (max-width: 1300px) {
   .tournament__event {
-    gap: 24px;
+    gap: 43px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 17px;
+  }
+}
+@media (max-width: 500px) {
+  .tournament__event {
+    gap: 17px;
   }
 }
 
@@ -510,8 +529,8 @@ img {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 32px;
-    margin-top: 37px;
-    margin-bottom: 27px;
+    margin-top: 42px;
+    margin-bottom: 39px;
   }
   .tournament__event-columns__block {
     display: -webkit-box;
@@ -520,15 +539,16 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 12px;
+    width: 100%;
     position: relative;
   }
   .tournament__event-columns__block--line::before {
     content: "";
     position: absolute;
     width: 100%;
-    bottom: 2px;
+    bottom: -16px;
     height: 1px;
-    color: #3057a2;
+    background: #d0d0d0;
   }
 }
 .tournament__event-table__title {
@@ -546,7 +566,12 @@ img {
 }
 
 .steps {
-  padding: 100px 0;
+  padding: 103px 0;
+}
+@media (max-width: 1100px) {
+  .steps {
+    padding: 28px 0;
+  }
 }
 
 .steps__column {
@@ -562,10 +587,26 @@ img {
           align-items: flex-start;
   gap: 54px;
 }
+@media (max-width: 768px) {
+  .steps__column {
+    gap: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .steps__column {
+    gap: 20px;
+  }
+}
 
 .steps__title-block {
   max-width: 715px;
   position: relative;
+}
+
+@media (max-width: 1100px) {
+  .steps__title {
+    margin-bottom: 2px;
+  }
 }
 
 .steps__link {
@@ -575,6 +616,12 @@ img {
   position: absolute;
   left: 301px;
   bottom: 10px;
+  font-size: clamp(1.125rem, 1.078rem + 0.2vw, 1.25rem);
+}
+@media (max-width: 1100px) {
+  .steps__link {
+    position: static;
+  }
 }
 
 .steps__list {
@@ -595,7 +642,7 @@ img {
   font-weight: 500;
   counter-increment: list-counter;
   position: relative;
-  background: url(./../../img/steps/bg.jpg), lightgray center/cover no-repeat;
+  background: url(./../img/steps/bg.jpg), lightgray center/cover no-repeat;
   background-color: #e9ded4;
 }
 
@@ -642,7 +689,138 @@ img {
   height: 376px;
   right: -8%;
   top: -125%;
-  background: url(./../../img/steps/01.png) right/contain no-repeat;
+  background: url(./../img/steps/01.png) right/contain no-repeat;
+}
+
+@media (max-width: 1100px) {
+  .steps__list--none {
+    display: none;
+  }
+  .steps__swiper--mobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+.steps__swiper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  padding-top: 128px;
+}
+
+.steps__swiper::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 335px;
+  height: 182px;
+  z-index: 2;
+  top: 0;
+  background: url(./../img/steps/01-mob.png) no-repeat;
+}
+
+.steps__swiper-block {
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 36px 239px;
+  gap: 3px;
+}
+
+.steps__swiper-slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 28px;
+  background: url(./../img/steps/bg.jpg), lightgray center/cover no-repeat;
+  height: 300px !important;
+  padding: 62px 20px 34px 32px;
+}
+
+.steps__swiper-slide__number {
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 6px;
+}
+
+.steps__swiper-slide__number::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  top: -4px;
+  left: -12px;
+  z-index: -1;
+}
+
+.steps__swiper-text {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.steps__swiper-navigation {
+  margin: 0 auto;
+  margin-top: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 13px;
+}
+
+.steps__swiper-pagination {
+  width: auto !important;
+}
+.steps__swiper-pagination span {
+  width: 10px;
+  height: 10px;
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 3px) !important;
+}
+
+.steps__swiper-button-prev,
+.steps__swiper-button-next {
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer; /* Добавлено для лучшей визуальной отзывчивости */
+}
+
+.steps__swiper-button-prev.disabled,
+.steps__swiper-button-next.disabled,
+.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.steps__swiper-button-prev circle:hover,
+.steps__swiper-button-next circle:hover {
+  -webkit-transition: fill 0.2s, color 0.2s;
+  transition: fill 0.2s, color 0.2s;
+  fill: #fbce51;
 }
 
 .ticker {
@@ -654,10 +832,10 @@ img {
 }
 @media (max-width: 500px) {
   .ticker {
-    padding: 10px 0;
+    padding: 6px 0;
   }
   .ticker--media-top {
-    top: -21px;
+    top: -23px;
   }
 }
 
@@ -694,8 +872,18 @@ img {
   }
 }
 .chessplayers {
-  padding-top: 100px;
   padding-bottom: 140px;
+  padding-top: 97px;
+}
+@media (max-width: 1300px) {
+  .chessplayers {
+    padding-top: 89px;
+  }
+}
+@media (max-width: 450px) {
+  .chessplayers {
+    padding-bottom: 179px;
+  }
 }
 
 .chessplayers__column {
@@ -707,6 +895,11 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 60px;
+}
+@media (max-width: 1035px) {
+  .chessplayers__column {
+    gap: 0px;
+  }
 }
 
 .chessplayers__title {
@@ -720,10 +913,22 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1035px) {
+  .chessplayers__title {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
-.swiper {
+.chessplayers__swiper {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .swiper-navigation {
@@ -739,9 +944,17 @@ img {
           justify-content: center;
   gap: 63px;
 }
+@media (max-width: 1035px) {
+  .swiper-navigation {
+    bottom: -464px;
+    margin: 0 auto;
+    gap: 56px;
+  }
+}
 
 .button-prev,
 .button-next {
+  width: 36px;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -787,11 +1000,10 @@ img {
           justify-content: center;
 }
 
-.swiper-slide {
-  width: auto; /* Убираем фиксированную ширину, чтобы слайды могли изменять свою ширину */
+.chessplayers-slide {
+  width: auto;
   -ms-flex-negative: 0;
-      flex-shrink: 0; /* Предотвращаем сжатие слайдов */
-  /* Добавляем отступы для красоты */
+      flex-shrink: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box !important;
@@ -809,7 +1021,12 @@ img {
           flex-direction: column;
 }
 
-/* Стили для заголовков и текста внутри слайдов */
+@media (max-width: 1035px) {
+  .chessplayers__swiper-image {
+    width: 243px;
+  }
+}
+
 .swiper-slide__title {
   margin-top: 28px;
 }
@@ -817,7 +1034,7 @@ img {
 .swiper-slide__text {
   margin-top: 6px;
   opacity: 0.6;
-  margin-bottom: 12px; /* Отступ между текстом и ссылкой */
+  margin-bottom: 12px;
 }
 
 .swiper-slide__link {
@@ -833,6 +1050,11 @@ img {
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
 }
+@media (max-width: 1100px) {
+  .swiper-slide__link {
+    margin-top: 10px;
+  }
+}
 
 .swiper-slide__link:hover {
   background-color: #3057a2;
@@ -843,6 +1065,11 @@ img {
   padding-top: 40px;
   padding-bottom: 70px;
   background: #e9ded4;
+}
+@media (max-width: 1035px) {
+  .footer {
+    padding-bottom: 60px;
+  }
 }
 
 .footer-text {

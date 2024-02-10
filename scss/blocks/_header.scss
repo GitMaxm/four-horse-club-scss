@@ -19,10 +19,11 @@
 
     @media (max-width: 600px) {
         padding-bottom: 250px;
+        padding-top: 18px;
     }
 
     @media (max-width: 375px) {
-        padding-bottom: 291px;
+        padding-bottom: 310px;
         background: url("./../img/header/all-600.png") no-repeat bottom center;
         background-color: #e9ded4;
     }
@@ -38,7 +39,7 @@
     background-image: url("./../img/header/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.1; /* Или любое другое значение для достижения желаемого эффекта */
+    opacity: 0.1;
 }
 
 .header__column {
@@ -50,6 +51,10 @@
     @media (max-width: 500px) {
         gap: 40px;
     }
+}
+
+.logo {
+    width: 213px;
 }
 
 .header__content {
@@ -67,6 +72,7 @@
 
         @media (max-width: 500px) {
             margin-bottom: 32px;
+            text-align: left;
         }
     }
 }
@@ -89,7 +95,7 @@
     @media (max-width: 676px) {
         flex-direction: column;
         align-items: center;
-        gap: 14px;
+        gap: 9px;
     }
 }
 .header__button {
@@ -110,6 +116,8 @@
 
     @media (max-width: 676px) {
         width: 100%;
+        padding: 24px;
+        height: 20px;
 
         .mobile-break {
             display: none;

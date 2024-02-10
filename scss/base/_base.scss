@@ -28,7 +28,7 @@ img {
 
 .title-2 {
 	font-family: var(--second-family);
-	font-size: 54px;
+	font-size: clamp(2.25rem, 1.823rem + 1.82vw, 3.375rem); // 54 - 36
 	text-transform: uppercase;
 }
 
