@@ -107,6 +107,10 @@
     }
 }
 
+.tournament__contact-link:hover {
+    opacity: 0.7;
+}
+
 @media (max-width: 768px) {
     .tournament__event-columns {
         display: flex !important;

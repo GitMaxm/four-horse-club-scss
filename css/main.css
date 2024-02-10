@@ -648,6 +648,10 @@ img {
   }
 }
 
+.tournament__contact-link:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 768px) {
   .tournament__event-columns {
     display: -webkit-box !important;
@@ -754,6 +758,10 @@ img {
   .steps__link {
     position: static;
   }
+}
+
+.steps__link:hover {
+  opacity: 0.7;
 }
 
 .steps__list {
